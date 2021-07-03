@@ -92,6 +92,37 @@ for _, clay in pairs(clay) do
 	end
 end
 
+-- Terracotta blocks (textures by D3monPixel, thanks for use :)
+for _, clay in pairs(clay) do
+
+	if clay[1] ~= "natural" then
+
+		local texture = "baked_clay_terracotta_" .. clay[1] ..".png"
+
+		minetest.register_node("bakedclay:terracotta_" .. clay[1], {
+			description = clay[2] .. " Glazed Terracotta",
+			tiles = {
+				texture .. "",
+				texture .. "",
+				texture .. "^[transformR180",
+				texture .. "",
+				texture .. "^[transformR270",
+				texture .. "^[transformR90",
+			},
+			paramtype2 = "facedir",
+			groups = {cracky = 3, terracotta = 1},
+			sounds = default.node_sound_stone_defaults(),
+			on_place = minetest.rotate_node
+		})
+
+		minetest.register_craft({
+			type = "cooking",
+			output = "bakedclay:terracotta_" .. clay[1],
+			recipe = "bakedclay:" .. clay[1]
+		})
+	end
+end
+
 -- cook clay block into white baked clay
 
 minetest.register_craft({
@@ -121,12 +152,6 @@ minetest.register_craft( {
 	type = "shapeless",
 	output = "dye:green 4",
 	recipe = {"default:cactus"}
-})
-
-minetest.register_craft( {
-	type = "shapeless",
-	output = "dye:black 4",
-	recipe = {"default:coal_lump"}
 })
 
 minetest.register_craft( {
