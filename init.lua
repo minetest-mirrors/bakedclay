@@ -361,8 +361,6 @@ lucky_block:add_blocks({
 	}},
 })
 
-lucky_block:purge_block_list()
-
 p = "bakedclay:terracotta_"
 
 lucky_block:add_blocks({
