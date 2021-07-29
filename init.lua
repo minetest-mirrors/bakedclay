@@ -131,24 +131,7 @@ for _, clay in pairs(clay) do
 	end
 end
 
--- special light blue glazed terracotta block
-local texture = "baked_clay_terracotta_light_blue.png"
-
-minetest.register_node("bakedclay:terracotta_light_blue", {
-	description = "Light Blue Glazed Terracotta",
-	tiles = {
-		texture .. "",
-		texture .. "",
-		texture .. "^[transformR180",
-		texture .. "",
-		texture .. "^[transformR270",
-		texture .. "^[transformR90",
-	},
-	paramtype2 = "facedir",
-	groups = {cracky = 3, terracotta = 1},
-	sounds = default.node_sound_stone_defaults(),
-	on_place = minetest.rotate_node
-})
+minetest.register_alias("bakedclay:terracotta_light_blue", "bakedclay:terracotta_cyan")
 
 -- cook clay block into white baked clay
 
@@ -365,7 +348,6 @@ p = "bakedclay:terracotta_"
 
 lucky_block:add_blocks({
 	{"nod", "default:chest", 0, {
-		{name = p.."light_blue", max = 20},
 		{name = p.."black", max = 20},
 		{name = p.."blue", max = 20},
 		{name = p.."brown", max = 20},

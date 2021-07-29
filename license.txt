@@ -21,5 +21,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-Textures by D3monPixel (https://mcpedl.com/better-glazed-terracotta-pack)
+Textures by Amara2_MK (Creative Commons)
+https://www.curseforge.com/minecraft/texture-packs/glazed-terracotta-revamp
   baked_clay_terracotta*.png
