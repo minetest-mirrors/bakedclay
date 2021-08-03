@@ -405,5 +405,14 @@ end
 
 end
 
+-- flowerpot mod
+
+if minetest.get_modpath("flowerpot") then
+	flowerpot.register_node("bakedclay:delphinium")
+	flowerpot.register_node("bakedclay:thistle")
+	flowerpot.register_node("bakedclay:lazarus")
+	flowerpot.register_node("bakedclay:mannagrass")
+end
+
 
 print ("[MOD] Baked Clay loaded")

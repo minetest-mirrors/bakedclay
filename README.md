@@ -8,7 +8,7 @@ https://forum.minetest.net/viewtopic.php?id=8890
 
 Changelog:
 
-- 1.0 - Re-Added glazed terracotta blocks when you cook baked clay in furnace (thanks Amara2_MK)
+- 1.0 - Re-Added glazed terracotta blocks when you cook baked clay in furnace (thanks Amara2_MK), added support for sofar's flowerpot mod
 - 0.9 - Baked clay now works in the technic cnc machine
 - 0.8 - Cooking clay block in furnace gives natural baked clay which you can dye
 - 0.7 - Added support for stairsplus so that stairs are registered properly
