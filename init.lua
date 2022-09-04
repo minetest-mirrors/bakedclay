@@ -212,14 +212,6 @@ if minetest.settings:get_bool("colored_clay_compatibility") == true then
 	end
 end
 
--- flowerpot mod
-if minetest.get_modpath("flowerpot") then
-	flowerpot.register_node("bakedclay:delphinium")
-	flowerpot.register_node("bakedclay:thistle")
-	flowerpot.register_node("bakedclay:lazarus")
-	flowerpot.register_node("bakedclay:mannagrass")
-end
-
 -- get mod path
 local path = minetest.get_modpath("bakedclay")
 

@@ -115,3 +115,11 @@ minetest.register_decoration({
 	spawn_by = "group:water",
 	num_spawn_by = 1
 })
+
+-- flowerpot mod
+if minetest.get_modpath("flowerpot") then
+	flowerpot.register_node("bakedclay:delphinium")
+	flowerpot.register_node("bakedclay:thistle")
+	flowerpot.register_node("bakedclay:lazarus")
+	flowerpot.register_node("bakedclay:mannagrass")
+end
