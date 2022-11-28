@@ -23,7 +23,7 @@ THE SOFTWARE.
 
 Textures by TenPlus1 (CC0) unless listed below
 
-Textures by Amara2_MK (CC0)
+Textures by Amara2_MK (Creative Commons)
 https://www.curseforge.com/minecraft/texture-packs/glazed-terracotta-revamp
   baked_clay_terracotta*.png
 
