@@ -91,10 +91,13 @@ for _, clay in pairs(clay) do
 	-- register bakedclay for use in technic_cnc mod
 	if techcnc_mod then
 
-		technic_cnc.register_all("bakedclay:" .. clay[1],
-		{cracky = 3, not_in_creative_inventory = 1},
-		{"baked_clay_" .. clay[1] .. ".png"},
-		clay[2] .. " Baked Clay")
+		minetest.after(0.1, function()
+
+			technic_cnc.register_all("bakedclay:" .. clay[1],
+				{cracky = 3, not_in_creative_inventory = 1},
+				{"baked_clay_" .. clay[1] .. ".png"},
+				clay[2] .. " Baked Clay")
+		end)
 	end
 end
 
