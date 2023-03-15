@@ -26,6 +26,8 @@ local techcnc_mod = minetest.get_modpath("technic_cnc")
 local stairs_mod = minetest.get_modpath("stairs")
 local stairsplus_mod = minetest.get_modpath("moreblocks")
 		and minetest.global_exists("stairsplus")
+local stairsplus_compat = minetest.settings:get_bool("stairsplus_clay_compatibility") ~= false
+
 
 -- scroll through colours
 for _, clay in pairs(clay) do
@@ -62,14 +64,17 @@ for _, clay in pairs(clay) do
 			sounds = default.node_sound_stone_defaults()
 		})
 
-		stairsplus:register_alias_all("bakedclay", clay[1],
-				"bakedclay", "baked_clay_" .. clay[1])
+		if stairsplus_compat then
 
-		minetest.register_alias("stairs:slab_bakedclay_".. clay[1],
-				"bakedclay:slab_baked_clay_" .. clay[1])
+			stairsplus:register_alias_all("bakedclay", clay[1],
+					"bakedclay", "baked_clay_" .. clay[1])
 
-		minetest.register_alias("stairs:stair_bakedclay_".. clay[1],
-				"bakedclay:stair_baked_clay_" .. clay[1])
+			minetest.register_alias("stairs:slab_bakedclay_".. clay[1],
+					"bakedclay:slab_baked_clay_" .. clay[1])
+
+			minetest.register_alias("stairs:stair_bakedclay_".. clay[1],
+					"bakedclay:stair_baked_clay_" .. clay[1])
+		end
 
 	-- stairs redo
 	elseif stairs_mod and stairs.mod then
