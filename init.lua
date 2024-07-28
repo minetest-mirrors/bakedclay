@@ -32,7 +32,6 @@ local stairsplus_mod = minetest.get_modpath("moreblocks")
 		and minetest.global_exists("stairsplus")
 local stairsplus_compat = minetest.settings:get_bool("stairsplus_clay_compatibility") ~= false
 
-
 -- scroll through colours
 
 for _, clay in pairs(clay) do
@@ -166,16 +165,14 @@ minetest.register_craft({
 
 -- register a few extra dye colour options
 
-minetest.register_craft( {
-	type = "shapeless",
+minetest.register_craft({
 	output = "dye:green 4",
-	recipe = {"default:cactus"}
+	recipe = {{"default:cactus"}}
 })
 
-minetest.register_craft( {
-	type = "shapeless",
+minetest.register_craft({
 	output = "dye:brown 4",
-	recipe = {"default:dry_shrub"}
+	recipe = {{"default:dry_shrub"}}
 })
 
 -- only add light grey recipe if unifieddye mod isnt present (conflict)
@@ -183,15 +180,13 @@ minetest.register_craft( {
 if not minetest.get_modpath("unifieddyes") then
 
 	minetest.register_craft( {
-		type = "shapeless",
 		output = "dye:dark_grey 3",
-		recipe = {"dye:black", "dye:black", "dye:white"}
+		recipe = {{"dye:black", "dye:black", "dye:white"}}
 	})
 
 	minetest.register_craft( {
-		type = "shapeless",
 		output = "dye:grey 3",
-		recipe = {"dye:black", "dye:white", "dye:white"}
+		recipe = {{"dye:black", "dye:white", "dye:white"}}
 	})
 end
 

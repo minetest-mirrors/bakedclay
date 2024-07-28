@@ -1,5 +1,9 @@
+
 -- translation support
+
 local S = minetest.get_translator("bakedclay")
+
+-- new flowers
 
 local flowers = {
 	{"delphinium", S("Blue Delphinium"),
@@ -15,8 +19,8 @@ local flowers = {
 	{-0.15, -0.5, -0.15, 0.15, 0.2, 0.15}, {color_dark_green = 1}}
 }
 
--- register some new flowers to fill in missing dye colours
--- flower registration (borrowed from default game)
+-- helper function
+
 local function add_simple_flower(name, desc, box, f_groups)
 
 	f_groups.snappy = 3
@@ -41,11 +45,14 @@ local function add_simple_flower(name, desc, box, f_groups)
 	})
 end
 
+-- register new flowers to fill in missing dye colours
+
 for _,item in pairs(flowers) do
 	add_simple_flower(unpack(item))
 end
 
 -- add new flowers to mapgen
+
 minetest.register_decoration({
 	deco_type = "simple",
 	place_on = {"default:dirt_with_grass"},
@@ -118,7 +125,8 @@ minetest.register_decoration({
 	num_spawn_by = 1
 })
 
--- flowerpot mod
+-- flowerpot mod support
+
 if minetest.get_modpath("flowerpot") then
 	flowerpot.register_node("bakedclay:delphinium")
 	flowerpot.register_node("bakedclay:thistle")
