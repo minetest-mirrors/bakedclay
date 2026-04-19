@@ -1,8 +1,7 @@
-
 -- translation and mod support check
 
 local S = core.get_translator("bakedclay")
-local flowerpot = core.get_modpath("flowerpot") and true
+local mod_flowerpot = core.get_modpath("flowerpot")
 
 -- helper function
 
@@ -29,7 +28,7 @@ local function add_flower(name, desc, f_groups)
 		selection_box = {type = "fixed", fixed = {-0.15, -0.5, -0.15, 0.15, 0.3, 0.15}}
 	})
 
-	if flowerpot then
+	if mod_flowerpot then
 		flowerpot.register_node("bakedclay:" .. name)
 	end
 end
