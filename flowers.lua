@@ -44,7 +44,7 @@ add_flower("mannagrass", S("Reed Mannagrass"), {color_dark_green = 1})
 
 core.register_decoration({
 	deco_type = "simple",
-	place_on = {"default:dirt_with_grass"},
+	place_on = {"default:dirt_with_grass", "ethereal:prairie_dirt", "ethereal:grove_dirt"},
 	sidelen = 16,
 	noise_params = {
 		offset = 0,
@@ -60,7 +60,10 @@ core.register_decoration({
 
 core.register_decoration({
 	deco_type = "simple",
-	place_on = {"default:dirt_with_grass", "default:dirt_with_dry_grass"},
+	place_on = {
+		"default:dirt_with_grass", "default:dirt_with_dry_grass",
+		"ethereal:grove_dirt", "ethereal:bamboo_dirt"
+	},
 	sidelen = 16,
 	noise_params = {
 		offset = 0,
